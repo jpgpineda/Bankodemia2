@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		084782783050419200481E91 /* Exceptions for "Bankodemia" folder in "Bankodemia" target */ = {
+		085C209930655ECA000D8622 /* Exceptions for "Bankodemia" folder in "Bankodemia" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,10 +21,15 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		084782683050419000481E91 /* Bankodemia */ = {
+		085C207130655EBE000D8622 /* New Folder */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "New Folder";
+			sourceTree = "<group>";
+		};
+		085C209130655EC9000D8622 /* Bankodemia */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				084782783050419200481E91 /* Exceptions for "Bankodemia" folder in "Bankodemia" target */,
+				085C209930655ECA000D8622 /* Exceptions for "Bankodemia" folder in "Bankodemia" target */,
 			);
 			path = Bankodemia;
 			sourceTree = "<group>";
@@ -45,7 +50,8 @@
 		0847825D3050419000481E91 = {
 			isa = PBXGroup;
 			children = (
-				084782683050419000481E91 /* Bankodemia */,
+				085C209130655EC9000D8622 /* Bankodemia */,
+				085C207130655EBE000D8622 /* New Folder */,
 				084782673050419000481E91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +80,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				084782683050419000481E91 /* Bankodemia */,
+				085C207130655EBE000D8622 /* New Folder */,
+				085C209130655EC9000D8622 /* Bankodemia */,
 			);
 			name = Bankodemia;
 			packageProductDependencies = (

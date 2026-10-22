@@ -11,7 +11,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
-    
+    @IBOutlet weak var passwordErrorLabel: UILabel!
+    @IBOutlet weak var emailErrorLabel: UILabel!
     private let presenter: LoginPresenter
     
     init(presenter: LoginPresenter) {
@@ -25,11 +26,50 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupView()
+    }
+    
+    func setupView() {
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        
+    }
+    
+    @objc private func textDidChange() {
+        presenter.fieldsDidChange(email: emailTextField.text ?? "",
+                                  password: passwordTextField.text ?? "")
     }
 
     @IBAction func requestLogin(_ sender: UIButton) {
     }
     
+}
+
+extension LoginViewController: LoginView {
+    func showEmailError(message: String?) {
+        emailErrorLabel.text = message
+        emailErrorLabel.isHidden = message == nil
+    }
+    
+    func showPasswordError(message: String?) {
+        passwordErrorLabel.text = message
+        passwordErrorLabel.isHidden = message == nil
+    }
+    
+    func setLoginButtonEnabled(_ isEnabled: Bool) {
+        loginButton.isEnabled = isEnabled
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            presenter.emailDidEndEditing(textField.text ?? "")
+        } else {
+            presenter.passwordDidEndEditing(textField.text ?? "")
+        }
+    }
 }

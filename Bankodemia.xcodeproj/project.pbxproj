@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0830665C3090E33A00F60671 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 0830665B3090E33A00F60671 /* Lottie */; };
+		0830665F3090EB4300F60671 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 0830665E3090EB4300F60671 /* FirebaseAuth */; };
+		083066613090EB4300F60671 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 083066603090EB4300F60671 /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		084782663050419000481E91 /* Bankodemia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bankodemia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -21,11 +27,6 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		085C207130655EBE000D8622 /* New Folder */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "New Folder";
-			sourceTree = "<group>";
-		};
 		085C209130655EC9000D8622 /* Bankodemia */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -41,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0830665C3090E33A00F60671 /* Lottie in Frameworks */,
+				0830665F3090EB4300F60671 /* FirebaseAuth in Frameworks */,
+				083066613090EB4300F60671 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				085C209130655EC9000D8622 /* Bankodemia */,
-				085C207130655EBE000D8622 /* New Folder */,
 				084782673050419000481E91 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -80,11 +83,13 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				085C207130655EBE000D8622 /* New Folder */,
 				085C209130655EC9000D8622 /* Bankodemia */,
 			);
 			name = Bankodemia;
 			packageProductDependencies = (
+				0830665B3090E33A00F60671 /* Lottie */,
+				0830665E3090EB4300F60671 /* FirebaseAuth */,
+				083066603090EB4300F60671 /* FirebaseFirestore */,
 			);
 			productName = Bankodemia;
 			productReference = 084782663050419000481E91 /* Bankodemia.app */;
@@ -114,6 +119,10 @@
 			);
 			mainGroup = 0847825D3050419000481E91;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0830665A3090E33A00F60671 /* XCRemoteSwiftPackageReference "lottie-spm" */,
+				0830665D3090EB4300F60671 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 084782673050419000481E91 /* Products */;
 			projectDirPath = "";
@@ -352,6 +361,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0830665A3090E33A00F60671 /* XCRemoteSwiftPackageReference "lottie-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-spm.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.6.1;
+			};
+		};
+		0830665D3090EB4300F60671 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.1.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0830665B3090E33A00F60671 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830665A3090E33A00F60671 /* XCRemoteSwiftPackageReference "lottie-spm" */;
+			productName = Lottie;
+		};
+		0830665E3090EB4300F60671 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830665D3090EB4300F60671 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		083066603090EB4300F60671 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0830665D3090EB4300F60671 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0847825E3050419000481E91 /* Project object */;
 }
